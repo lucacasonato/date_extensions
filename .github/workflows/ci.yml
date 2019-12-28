@@ -1,14 +1,13 @@
-name: Dart CI
+name: ci
 
 on: [push]
 
 jobs:
   build:
+    name: test
     runs-on: ubuntu-latest
-
     container:
       image: google/dart:latest
-
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
